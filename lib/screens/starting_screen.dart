@@ -1,6 +1,5 @@
 import 'package:chatting_app/screens/homescreen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class StartingScreen extends StatelessWidget {
   const StartingScreen({super.key});
@@ -10,12 +9,7 @@ class StartingScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Color.fromARGB(255,37, 150, 190),
-              Color.fromARGB(255, 0, 187, 255),
-            ]
-          )
+          color: Color.fromARGB(255, 46, 47, 56),
         ),
         child: Center(
           child: InkWell(
@@ -40,7 +34,7 @@ class StartingScreen extends StatelessWidget {
                 Text(
                   'Chatting App',
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    color: Colors.black,
+                    color: Colors.white,
                   ),
                 ),
               ],
