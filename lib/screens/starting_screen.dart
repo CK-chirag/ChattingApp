@@ -1,4 +1,4 @@
-import 'package:chatting_app/screens/homescreen.dart';
+import 'package:chatting_app/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class StartingScreen extends StatelessWidget {
@@ -16,7 +16,7 @@ class StartingScreen extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Homescreen()),
+                MaterialPageRoute(builder: (context) => const LoginScreen()),
               );
             },
             child: Row(

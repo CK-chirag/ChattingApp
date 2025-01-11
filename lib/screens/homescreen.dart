@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:dotted_border/dotted_border.dart';
+import 'package:chatting_app/screens/tabs.dart';
+import 'package:chatting_app/screens/chatting_screen.dart';
 
 class Homescreen extends StatelessWidget {
   const Homescreen({super.key});
@@ -7,6 +9,9 @@ class Homescreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: TabsScreen(),
+      ),
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 46, 47, 56),
         iconTheme: const IconThemeData(
@@ -283,7 +288,14 @@ class Homescreen extends StatelessWidget {
                               borderRadius: BorderRadius.circular(20),
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ChattingScreen(),
+                              ),
+                            );
+                          },
                           child: Text("Start Chat",
                               style: Theme.of(context).textTheme.titleMedium),
                         ),
